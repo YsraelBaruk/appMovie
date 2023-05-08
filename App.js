@@ -15,15 +15,15 @@ export default function App() {
     <NavigationContainer>
         <Menu screenOptions={{
           drawerStyle: {
-            backgroundColor: "#ccc",
+            backgroundColor: "#5f0202b8",
           },
           drawerLabelStyle: {
             fontSize: 20,
             fontWeight: 'bold',
           },
-          drawerActiveBackgroundColor: "blue",
-          drawerInactiveTintColor: "black",
-          drawerActiveTintColor: "white",
+          drawerActiveBackgroundColor: "#db3f2dd1",
+          drawerInactiveTintColor: "white",
+          drawerActiveTintColor: "black",
           drawerLabelPosition: "beside-icon"
         }}
         >
