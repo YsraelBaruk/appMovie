@@ -1,30 +1,38 @@
 import { ImageBackground, Text } from "react-native";
 import { StyleSheet} from 'react-native';
-import { View } from "react-native-web";
-
+import wallpaper from '../assets/wall.jpg';
 
 const Card = ({imagem, titulo, sinopse, lancamento, age, genero, duracao})=>{
     return(
-        <ImageBackground 
+        <ImageBackground
             style={estilo.tela}
+            source={wallpaper}
+            resizeMode="fill"
         >
-            <ImageBackground
-                style={estilo.movie}
-                source={imagem}
-                borderRadius={10}
-                resizeMode="stretch"
-            >
-                <Text style={estilo.titulo}>{titulo}</Text>
+            <ImageBackground style={estilo.card}>
+                <ImageBackground
+                    style={estilo.movie}
+                    source={imagem}
+                    borderRadius={10}
+                    resizeMode="stretch"
+                    >
+                    <Text style={estilo.titulo}>{titulo}</Text>
+                </ImageBackground>
+                <Text style={estilo.texto1}>Lançamento: {lancamento}, Idade: {age}, {genero}, {duracao}</Text>
+                <Text style={estilo.texto2}>Sinopse: {sinopse}</Text>
             </ImageBackground>
-            <Text style={estilo.texto1}>Lançamento: {lancamento}, Idade: {age}, {genero}, {duracao}</Text>
-            <Text style={estilo.texto2}>Sinopse: {sinopse}</Text>
         </ImageBackground>
     );
 }
 
 
 const estilo = StyleSheet.create({
-    tela:{
+    tela: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    card:{
         borderColor: 'black', 
         borderWidth: 5,
         margin: 30,

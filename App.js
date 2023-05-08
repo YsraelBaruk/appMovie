@@ -14,17 +14,17 @@ export default function App() {
     
     <NavigationContainer>
         <Menu screenOptions={{
-          tabBarStyle: {
-            backgroundColor: "#ccc"              
+          drawerStyle: {
+            backgroundColor: "#ccc",
           },
-          tabBarLabelStyle: {
+          drawerLabelStyle: {
             fontSize: 20,
             fontWeight: 'bold',
           },
-          tabBarActiveBackgroundColor: "#fff",
-          tabBarInactiveTintColor: "#555",
-          tabBarActiveTintColor: "#222",
-          tabBarLabelPosition: "beside-icon"
+          drawerActiveBackgroundColor: "blue",
+          drawerInactiveTintColor: "black",
+          drawerActiveTintColor: "white",
+          drawerLabelPosition: "beside-icon"
         }}
         >
           <ItensMenu name="Movie" component={Movie}
