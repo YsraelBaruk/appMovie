@@ -13,6 +13,7 @@ export default function Movie() {
             age: "12",
             genero: "Ficção científica, Aventura, Ação, Comédia",
             duracao: "2h 30m",
+            avaliacao: 1.0,
         },
         {
             id:"2",
@@ -23,6 +24,7 @@ export default function Movie() {
             age: "12",
             genero: "Ação, Ficção científica, Aventura",
             duracao: "2h 6m",
+            avaliacao: 1.0,
         },
         {
             id:"3",
@@ -33,6 +35,7 @@ export default function Movie() {
             age: "14",
             genero: "Aventura, Ação, Thriller",
             duracao: "2h 43m",
+            avaliacao: 1.0,
         },
         {
             id:"4",
@@ -43,6 +46,7 @@ export default function Movie() {
             age: "12",
             genero: "Aventura, Ação, Ficção científica, Fantasia ",
             duracao: "2h 16m",
+            avaliacao: 1.0,
         },
     ];
 
@@ -60,6 +64,7 @@ export default function Movie() {
                             age={item.age}
                             genero={item.genero}
                             duracao={item.duracao}
+                            avaliacao={item.avaliacao}
                         />
                     }
                     keyExtractor={item => item.id}

@@ -13,6 +13,7 @@ export default function Series() {
             age: "16",
             genero: "Action & Adventure, Drama, Sci-Fi & Fantasy",
             duracao: "42m",
+            avaliacao: 1.0,
         },
         {
             id:"2",
@@ -23,6 +24,7 @@ export default function Series() {
             age: "14",
             genero: "Sci-Fi & Fantasy, Action & Adventure, Drama",
             duracao: "40m",
+            avaliacao: 1.0,
         },
         {
             id:"3",
@@ -33,6 +35,7 @@ export default function Series() {
             age: "16",
             genero: "Drama",
             duracao: "59m",
+            avaliacao: 1.0,
         },
         {
             id:"4",
@@ -43,6 +46,7 @@ export default function Series() {
             age: "14",
             genero: "Drama, Sci-Fi & Fantasy",
             duracao: "44m",
+            avaliacao: 1.0,
         },
         {
             id:"5",
@@ -53,6 +57,7 @@ export default function Series() {
             age: "14",
             genero: "Action & Adventure, Drama",
             duracao: "42m",
+            avaliacao: 1.0,
         },
         {
             id:"6",
@@ -63,6 +68,7 @@ export default function Series() {
             age: "16",
             genero: "Action & Adventure, Sci-Fi & Fantasy",
             duracao: "40m",
+            avaliacao: 4.6,
         },
     ];
 
@@ -80,6 +86,7 @@ export default function Series() {
                             age={item.age}
                             genero={item.genero}
                             duracao={item.duracao}
+                            avaliacao={item.avaliacao}
                         />
                     }
                     keyExtractor={item => item.id}

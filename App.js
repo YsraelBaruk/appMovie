@@ -1,10 +1,15 @@
 import { NavigationContainer} from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+//Icones
 import { AntDesign } from '@expo/vector-icons';
-//createBottomTabsNavigator
+import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+//Telas
 import Movie from "./components/Movie";
 import Series from "./components/Series";
 import Documentary from "./components/Documentary";
+import tv from "./components/tv";
 
 const Menu = createDrawerNavigator().Navigator;
 const ItensMenu = createDrawerNavigator().Screen;
@@ -29,12 +34,22 @@ export default function App() {
         >
           <ItensMenu name="Movie" component={Movie}
             options={{
-              tabBarIcon: <AntDesign name="check" size={10} color='black' />,
-              tabBarBadge: 4,
+              drawerIcon:({size})=>( <MaterialIcons name="movie" size={20} color="white" />),
+              
             }}
           />
-          <ItensMenu name="Series" component={Series}/>
-          <ItensMenu name="Documentary" component={Documentary}/>
+          <ItensMenu name="Series" component={Series}
+            options={{
+              drawerIcon:({size})=>(<MaterialCommunityIcons name="netflix" size={24} color="white" />),
+              
+            }}
+          />
+          <ItensMenu name="Documentary" component={Documentary}
+            options={{
+            drawerIcon: ({size})=>(<Ionicons name="md-tv-outline" size={24} color="white" />),
+          }}
+          />
+          <ItensMenu name="TV" component={tv}/>
         </Menu>
     </NavigationContainer>
   );

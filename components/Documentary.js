@@ -12,6 +12,7 @@ export default function Documentary() {
             age: "L",
             genero: "Documentário, História",
             duracao: " 1h 45m",
+            avaliacao: 1.0,
         },
         {
             id:"2",
@@ -22,6 +23,7 @@ export default function Documentary() {
             age: "10",
             genero: "Documentário",
             duracao: "1h 38m",
+            avaliacao: 1.0,
         },
         {
             id:"3",
@@ -32,6 +34,7 @@ export default function Documentary() {
             age: "10",
             genero: "Documentário",
             duracao: "1h 48m",
+            avaliacao: 1.0,
         },
         {
             id:"4",
@@ -42,6 +45,7 @@ export default function Documentary() {
             age: "12",
             genero: "Documentário",
             duracao: "1 Season 4 Episodes",
+            avaliacao: 1.0,
         },
 ];
 
@@ -59,6 +63,7 @@ return (
                         age={item.age}
                         genero={item.genero}
                         duracao={item.duracao}
+                        avaliacao={item.avaliacao}
                     />
                 }
                 keyExtractor={item => item.id}

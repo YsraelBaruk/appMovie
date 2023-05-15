@@ -1,8 +1,20 @@
 import { ImageBackground, Text } from "react-native";
 import { StyleSheet} from 'react-native';
 import wallpaper from '../assets/wall.jpg';
+import { FontAwesome } from '@expo/vector-icons';
 
-const Card = ({imagem, titulo, sinopse, lancamento, age, genero, duracao})=>{
+const Card = ({imagem, titulo, sinopse, lancamento, age, genero, duracao, avaliacao})=>{
+
+    let inteiro = parseInt(avaliacao);
+    let resto  = avaliacao - inteiro;
+    let estrela = [];
+    for(let id = 0; id < inteiro; id++){
+        estrela.push(<FontAwesome name="star" size={24} color="yellow" />);
+    }
+    if(resto > 0){
+        estrela.push(<FontAwesome name="star-half-full" size={24} color="yellow" />);
+    }
+
     return(
         <ImageBackground
             style={estilo.tela}
@@ -20,6 +32,7 @@ const Card = ({imagem, titulo, sinopse, lancamento, age, genero, duracao})=>{
                 </ImageBackground>
                 <Text style={estilo.texto1}>Lançamento: {lancamento}, Idade: {age}, {genero}, {duracao}</Text>
                 <Text style={estilo.texto2}>Sinopse: {sinopse}</Text>
+                <Text style={estilo.texto2}>{estrela.map(e => (e))}</Text>
             </ImageBackground>
         </ImageBackground>
     );
@@ -42,7 +55,7 @@ const estilo = StyleSheet.create({
         borderBottomRightRadius: 10,
     },
     movie:{
-        width: 300,
+        width: 350,
         height: 500,
         backgroundColor: '#ddd',
         borderRadius: 10,
